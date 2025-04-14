@@ -12,5 +12,7 @@ func RegisterPostRoutes(rg *gin.RouterGroup) {
 		posts.GET("", handler.GetPosts)
         posts.GET("/:id", handler.GetPost)
         posts.POST("", handler.CreatePost)
+        posts.PATCH("/:id", handler.UpdatePost)
+        posts.DELETE("/:id", handler.DeletePost)
 	}
 }
